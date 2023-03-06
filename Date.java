@@ -2,6 +2,13 @@ public class Date {
     private int month;
     private int day;
     private int year;
+    
+    // NOTE: always put the constructor between the instance variables and the instance methods
+    public Date(int theMonth, int theDay, int theYear){
+        month = theMonth;
+        day = theDay;
+        year = theYear;
+    }
 
     public int getMonth() {
         return month;
@@ -15,11 +22,7 @@ public class Date {
         return year;
     }
 
-    public Date(int theMonth, int theDay, int theYear){
-        month = theMonth;
-        day = theDay;
-        year = theYear;
-    }
+    
 
     public String toString() {
         String result = "";
@@ -35,6 +38,8 @@ public class Date {
         }
         result += day;
         result += "/";
+
+        // TODO: needs to ensure the year is always 4 digits long by padding when necessary
 
         result += year;
 
