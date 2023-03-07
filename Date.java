@@ -3,7 +3,6 @@ public class Date {
     private int day;
     private int year;
     
-    // NOTE: always put the constructor between the instance variables and the instance methods
     public Date(int theMonth, int theDay, int theYear){
         month = theMonth;
         day = theDay;
@@ -39,8 +38,15 @@ public class Date {
         result += day;
         result += "/";
 
-        // TODO: needs to ensure the year is always 4 digits long by padding when necessary
-
+        if (year < 1000) {
+            result += "0";
+            if (year < 100) {
+                result += "0";
+                if (year < 10) {
+                    result += "0";
+                }
+            }
+        }
         result += year;
 
         return result;
