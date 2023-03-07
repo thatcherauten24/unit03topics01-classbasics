@@ -21,8 +21,6 @@ public class Date {
         return year;
     }
 
-    
-
     public String toString() {
         String result = "";
 
